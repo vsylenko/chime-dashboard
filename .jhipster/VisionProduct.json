@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "entityTableName": "vision_product",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imageUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "webUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "resourceCardImageUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "resourceCardTitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "resourceCardText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "resourceCardColor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pdfText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pdfFileName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "resourceCardActive",
+      "fieldType": "String"
+    }
+  ],
+  "name": "VisionProduct",
+  "relationships": []
+}

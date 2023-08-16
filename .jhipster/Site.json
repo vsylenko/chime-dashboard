@@ -1,0 +1,53 @@
+{
+  "applications": "*",
+  "entityTableName": "site",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "identifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Site",
+  "relationships": [
+    {
+      "otherEntityName": "visionStaffOrgRole",
+      "otherEntityRelationshipName": "site",
+      "relationshipName": "visionStaffOrgRole",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "visionSiteSurgeryCenter",
+      "otherEntityRelationshipName": "site",
+      "relationshipName": "visionSiteSurgeryCenter",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "organization",
+      "relationshipName": "organization",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}
