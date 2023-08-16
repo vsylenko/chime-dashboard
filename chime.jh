@@ -1,0 +1,67 @@
+
+entity Organization {
+    name String
+    region String
+    isActive String
+    oktaOrgId String
+}
+
+entity Site {
+    name String
+    identifier String
+    address String
+    phone String
+    code String
+    isActive String
+}
+
+entity Staff {
+
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+}
+
+entity VisionRole {
+	name String
+    description String
+}
+
+entity VisionStaffOrgRole {
+	assignedDate Instant
+}
+
+entity VisionSiteSurgeryCenter {
+	visionSurgeryCenterId String
+}
+
+entity VisionProduct {
+	name String, 
+	imageUrl String, 
+	webUrl String,
+	active String, 
+	resourceCardImageUrl String, 
+	resourceCardTitle String, 
+	resourceCardText String, 
+	resourceCardColor String, 
+	pdfText String, 
+	pdfFileName String, 
+	resourceCardActive String
+}
+    
+relationship OneToMany {
+	Staff to VisionStaffOrgRole{staff},
+    VisionRole to VisionStaffOrgRole{visionRole},
+    Organization to VisionStaffOrgRole{organization},
+    Site to VisionStaffOrgRole{site},
+    Organization to VisionSiteSurgeryCenter{organization},
+    Site to VisionSiteSurgeryCenter{site},
+	Organization to Site{organization}
+}
+
+
+
+// Set pagination options
+paginate Organization, Staff with infinite-scroll
+
