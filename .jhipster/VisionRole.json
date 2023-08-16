@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "entityTableName": "vision_role",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "name": "VisionRole",
+  "relationships": [
+    {
+      "otherEntityName": "visionStaffOrgRole",
+      "otherEntityRelationshipName": "visionRole",
+      "relationshipName": "visionStaffOrgRole",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

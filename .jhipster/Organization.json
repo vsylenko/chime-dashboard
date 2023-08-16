@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "entityTableName": "organization",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "region",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "oktaOrgId",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Organization",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "visionStaffOrgRole",
+      "otherEntityRelationshipName": "organization",
+      "relationshipName": "visionStaffOrgRole",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "visionSiteSurgeryCenter",
+      "otherEntityRelationshipName": "organization",
+      "relationshipName": "visionSiteSurgeryCenter",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "site",
+      "otherEntityRelationshipName": "organization",
+      "relationshipName": "site",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

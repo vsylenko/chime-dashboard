@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "entityTableName": "vision_site_surgery_center",
+  "fields": [
+    {
+      "fieldName": "visionSurgeryCenterId",
+      "fieldType": "String"
+    }
+  ],
+  "name": "VisionSiteSurgeryCenter",
+  "relationships": [
+    {
+      "otherEntityName": "organization",
+      "relationshipName": "organization",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "site",
+      "relationshipName": "site",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}

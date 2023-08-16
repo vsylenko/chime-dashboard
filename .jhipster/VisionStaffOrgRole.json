@@ -1,0 +1,37 @@
+{
+  "applications": "*",
+  "entityTableName": "vision_staff_org_role",
+  "fields": [
+    {
+      "fieldName": "assignedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "VisionStaffOrgRole",
+  "relationships": [
+    {
+      "otherEntityName": "staff",
+      "relationshipName": "staff",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "visionRole",
+      "relationshipName": "visionRole",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "organization",
+      "relationshipName": "organization",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "site",
+      "relationshipName": "site",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}

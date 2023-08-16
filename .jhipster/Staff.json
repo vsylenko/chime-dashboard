@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "entityTableName": "staff",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Staff",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "visionStaffOrgRole",
+      "otherEntityRelationshipName": "staff",
+      "relationshipName": "visionStaffOrgRole",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}
